@@ -1,0 +1,190 @@
+2025-11-12T23:35:29.303-03:00  INFO 6840 --- [notification-service] [main] .e.n.NotificationServiceApplicationTests : Starting NotificationServiceApplicationTests using Java 22.0.2 with PID 6840 (started by user in F:\projetosEmJava\library-service\notification-service)
+2025-11-12T23:35:29.304-03:00  INFO 6840 --- [notification-service] [main] .e.n.NotificationServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-11-12T23:35:30.037-03:00  INFO 6840 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-11-12T23:35:30.165-03:00  INFO 6840 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2025-11-12T23:35:30.166-03:00  INFO 6840 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2025-11-12T23:35:30.166-03:00  INFO 6840 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1763001330164
+2025-11-12T23:35:30.169-03:00  INFO 6840 --- [notification-service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Subscribed to topic(s): book-events
+2025-11-12T23:35:30.180-03:00  INFO 6840 --- [notification-service] [main] .e.n.NotificationServiceApplicationTests : Started NotificationServiceApplicationTests in 1.21 seconds (process running for 2.007)
+2025-11-12T23:35:30.449-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Cluster ID: SIkG-Ch7TIyacdFt4szUOQ
+2025-11-12T23:35:30.450-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2025-11-12T23:35:31.128-03:00  INFO 6840 --- [notification-service] [main] c.e.n.kafka.NotificationConsumer         : 📨 Received BookEvent: BookEvent(bookId=1, title=Java Básico, status=BORROWED, userName=Matheus, userEmail=matheus@test.com)
+2025-11-12T23:35:31.136-03:00  INFO 6840 --- [notification-service] [main] c.e.n.kafka.NotificationConsumer         : 📨 Received BookEvent: BookEvent(bookId=1, title=Java Básico, status=AVAILABLE, userName=Matheus, userEmail=matheus@test.com)
+2025-11-12T23:35:31.136-03:00  INFO 6840 --- [notification-service] [main] c.e.n.kafka.NotificationConsumer         : 📢 Notification: O livro 'Java Básico' está disponível novamente!
+2025-11-12T23:35:31.137-03:00  INFO 6840 --- [notification-service] [main] c.e.n.kafka.NotificationConsumer         : ✅ Email enviado para matheus@test.com
+2025-11-12T23:35:32.718-03:00  WARN 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Error connecting to node kafka:9092 (id: 2147483646 rack: null)
+
+java.net.UnknownHostException: Este host não é conhecido (kafka)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676) ~[na:na]
+	at org.apache.kafka.clients.DefaultHostResolver.resolve(DefaultHostResolver.java:27) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClientUtils.resolve(ClientUtils.java:122) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.currentAddress(ClusterConnectionStates.java:510) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.access$200(ClusterConnectionStates.java:467) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClusterConnectionStates.currentAddress(ClusterConnectionStates.java:173) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:1030) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.ready(NetworkClient.java:301) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.tryConnect(ConsumerNetworkClient.java:590) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$FindCoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:907) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$FindCoordinatorResponseHandler.onSuccess(AbstractCoordinator.java:883) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.RequestFuture$1.onSuccess(RequestFuture.java:206) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.fireSuccess(RequestFuture.java:169) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.RequestFuture.complete(RequestFuture.java:129) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient$RequestFutureCompletionHandler.fireCompletion(ConsumerNetworkClient.java:617) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.firePendingCompletedRequests(ConsumerNetworkClient.java:427) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:312) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:230) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:265) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:240) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.coordinatorUnknownAndUnreadySync(ConsumerCoordinator.java:504) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:536) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1220) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1179) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1159) ~[kafka-clients-3.6.1.jar:na]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollConsumer(KafkaMessageListenerContainer.java:1664) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1639) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1437) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1328) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-11-12T23:35:32.723-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] (Re-)joining group
+2025-11-12T23:35:32.728-03:00  WARN 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Error connecting to node kafka:9092 (id: 2147483646 rack: null)
+
+java.net.UnknownHostException: kafka
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676) ~[na:na]
+	at org.apache.kafka.clients.DefaultHostResolver.resolve(DefaultHostResolver.java:27) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClientUtils.resolve(ClientUtils.java:122) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.currentAddress(ClusterConnectionStates.java:510) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.access$200(ClusterConnectionStates.java:467) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.ClusterConnectionStates.currentAddress(ClusterConnectionStates.java:173) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:1030) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.ready(NetworkClient.java:301) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.trySend(ConsumerNetworkClient.java:513) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:270) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:230) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:214) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.joinGroupIfNeeded(AbstractCoordinator.java:455) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureActiveGroup(AbstractCoordinator.java:389) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:564) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.updateAssignmentMetadataIfNeeded(KafkaConsumer.java:1220) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1179) ~[kafka-clients-3.6.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1159) ~[kafka-clients-3.6.1.jar:na]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollConsumer(KafkaMessageListenerContainer.java:1664) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1639) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1437) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1328) ~[spring-kafka-3.1.3.jar:3.1.3]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2025-11-12T23:35:32.729-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Group coordinator kafka:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2025-11-12T23:35:32.729-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-11-12T23:35:32.730-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Request joining group due to: consumer pro-actively leaving the group
+2025-11-12T23:35:32.730-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Unsubscribed all topics or patterns and assigned partitions
+2025-11-12T23:35:32.731-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-11-12T23:35:32.731-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Request joining group due to: consumer pro-actively leaving the group
+2025-11-12T23:35:32.733-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-11-12T23:35:32.734-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-11-12T23:35:32.734-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-11-12T23:35:32.738-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-notification-group-1 unregistered
+2025-11-12T23:35:32.739-03:00  INFO 6840 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-group: Consumer stopped
