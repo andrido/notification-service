@@ -3,6 +3,7 @@ package com.exadel.notificationservice.kafka;
 
 
 import com.exadel.notificationservice.dto.BookEvent;
+import com.exadel.notificationservice.dto.BookStatus;
 import com.exadel.notificationservice.service.EmailService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,7 @@ class NotificationConsumerTest {
 
     @Test
     void consume_shouldCallEmailService_whenBookIsAvailable() {
-        BookEvent event = new BookEvent(1L, "Java Básico", "AVAILABLE", "Matheus", "matheus@test.com");
+        BookEvent event = new BookEvent(1L, "Java Básico", BookStatus.AVAILABLE, "Matheus", "matheus@test.com");
 
         consumer.consume(event);
 
@@ -34,7 +35,7 @@ class NotificationConsumerTest {
 
     @Test
     void consume_shouldNotCallEmailService_whenBookNotAvailable() {
-        BookEvent event = new BookEvent(1L, "Java Básico", "BORROWED", "Matheus", "matheus@test.com");
+        BookEvent event = new BookEvent(1L, "Java Básico", BookStatus.BORROWED, "Matheus", "matheus@test.com");
 
         consumer.consume(event);
 

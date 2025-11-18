@@ -1,6 +1,7 @@
 package com.exadel.notificationservice.kafka;
 
 import com.exadel.notificationservice.dto.BookEvent;
+import com.exadel.notificationservice.dto.BookStatus;
 import com.exadel.notificationservice.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,14 +19,14 @@ public class NotificationConsumer {
     public void consume(BookEvent event) {
         log.info("📨 Received BookEvent: {}", event);
 
-        if ("AVAILABLE".equalsIgnoreCase(event.getStatus())) {
+        if (event.getStatus().equals(BookStatus.AVAILABLE)) {
             log.info("📢 Notification: O livro '{}' está disponível novamente!", event.getTitle());
 
             // 👉 Enviar e-mail para o usuário
             try {
                 emailService.sendBookAvailableEmail(
-                        event.getUserEmail(),   // precisa existir esse campo no evento
-                        event.getUserName(),    // idem
+                        event.getUserEmail(),
+                        event.getUserName(),
                         event.getTitle()
                 );
                 log.info("✅ Email enviado para {}", event.getUserEmail());
